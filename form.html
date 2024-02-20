@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ML Quiz</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+    </div>
+    </nav>
+    <h2 class="fade-in" style="text-align: center; margin-top: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Machine Learning Quiz</h2>
+
+    <div class="container fade-in">
+        <form id="mlForm">
+        <div class="questions">
+            <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">1.	What is the primary goal of supervised learning?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios1" id="optionsRadios1a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios1a">
+                        a)	To classify data into predefined categories
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios1" id="optionsRadios1b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios1b">
+                        b)	To discover patterns in unlabelled data
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios1" id="optionsRadios1c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios1c">
+                        c)	To optimize an objective function
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios1" id="optionsRadios1d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios1d">
+                        d)	To predict continuous values
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">2. Which algorithm is commonly used for binary classification tasks?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios2" id="optionsRadios2a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios2a">
+                        a) Decision Trees
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios2" id="optionsRadios2b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios2b">
+                        b) K-Means Clustering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios2" id="optionsRadios2c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios2c">
+                        c) Linear Regression
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios2" id="optionsRadios2d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios2d">
+                        d) K-Nearest Neighbors
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">3. Which evaluation metric is most appropriate for imbalanced datasets?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios3" id="optionsRadios3a" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios3a">
+                        a) Accuracy
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios3" id="optionsRadios3b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios3b">
+                        b) Precision
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios3" id="optionsRadios3c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios3c">
+                        c) Recall
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios3" id="optionsRadios3d" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios3d">
+                        d) F1-score
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">4. What is the purpose of cross-validation in machine learning?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios4" id="optionsRadios4a" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios4a">
+                        a) To maximize the training accuracy
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios4" id="optionsRadios4b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios4b">
+                        b) To evaluate the model's performance on unseen data
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios4" id="optionsRadios4c" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios4c">
+                        c) To reduce overfitting
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios4" id="optionsRadios4d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios4d">
+                        d) To speed up the training process
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">5. Which technique is used to handle missing data in a dataset?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios5" id="optionsRadios5a" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios5a">
+                        a) Dropping the rows with missing values
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios5" id="optionsRadios5b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios5b">
+                        b) Filling missing values with the mean of the column
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios5" id="optionsRadios5c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios5c">
+                        c) Imputing missing values using a machine learning algorithm
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios5" id="optionsRadios5d" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios5d">
+                        d) All of the above
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+    
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">6. What does the term 'bias' refer to in machine learning?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios6" id="optionsRadios6a" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios6a">
+                        a) The difference between predicted and actual values
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios6" id="optionsRadios6b" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios6b">
+                        b) The error introduced by overly simplistic assumptions
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios6" id="optionsRadios6c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios6c">
+                        c) The variability of predictions for a given input
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios6" id="optionsRadios6d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios6d">
+                        d) The tendency of a model to perform well on training data but poorly on unseen data
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">7. Which technique is used to prevent overfitting in neural networks?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios7" id="optionsRadios7a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios7a">
+                        a) Dropout regularization
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios7" id="optionsRadios7b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios7b">
+                        b) Feature scaling
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios7" id="optionsRadios7c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios7c">
+                        c) L1 regularization
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios7" id="optionsRadios7d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios7d">
+                        d) Early stopping
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">8. In reinforcement learning, what is the agent's objective?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios8" id="optionsRadios8a" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios8a">
+                        a) To minimize prediction errors
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios8" id="optionsRadios8b" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios8b">
+                        b) To maximize immediate rewards
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios8" id="optionsRadios8c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios8c">
+                        c) To classify data into predefined categories
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios8" id="optionsRadios8d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios8d">
+                        d) To optimize an objective function
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">9. Which algorithm is used for dimensionality reduction?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios9" id="optionsRadios9a" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios9a">
+                        a) Random Forest
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios9" id="optionsRadios9b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios9b">
+                        b) K-Means Clustering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios9" id="optionsRadios9c" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios9c">
+                        c) Principal Component Analysis (PCA)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios9" id="optionsRadios9d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios9d">
+                        d) Gradient Boosting
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">10. What is the purpose of the activation function in a neural network?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios10" id="optionsRadios10a" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios10a">
+                        a) To normalize input data
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios10" id="optionsRadios10b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios10b">
+                        b) To initialize the weights of the network
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios10" id="optionsRadios10c" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios10c">
+                        c) To introduce non-linearity into the network
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios10" id="optionsRadios10d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios10d">
+                        d) To regularize the network
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+    
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">11. Which algorithm is used for sequential data analysis, such as time series forecasting?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios11" id="optionsRadios11a" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios11a">
+                        a) Random Forest
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios11" id="optionsRadios11b" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios11b">
+                        b) Recurrent Neural Networks (RNN)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios11" id="optionsRadios11c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios11c">
+                        c) Support Vector Machines (SVM)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios11" id="optionsRadios11d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios11d">
+                        d) K-Means Clustering
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">12. Which technique is used to reduce the variance of an estimator?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios12" id="optionsRadios12a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios12a">
+                        a) Bagging
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios12" id="optionsRadios12b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios12b">
+                        b) Boosting
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios12" id="optionsRadios12c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios12c">
+                        c) Dropout regularization
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios12" id="optionsRadios12d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios12d">
+                        d) L1 regularization
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">13. What is the purpose of the learning rate in gradient descent optimization?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios13" id="optionsRadios13a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios13a">
+                        a) To control the speed at which the model learns
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios13" id="optionsRadios13b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios13b">
+                        b) To determine the number of iterations
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios13" id="optionsRadios13c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios13c">
+                        c) To prevent overfitting
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios13" id="optionsRadios13d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios13d">
+                        d) To initialize the weights of the network
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">14. Which algorithm is used for outlier detection?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios14" id="optionsRadios14a" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios14a">
+                        a) K-Means Clustering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios14" id="optionsRadios14b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios14b">
+                        b) K-Nearest Neighbors
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios14" id="optionsRadios14c" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios14c">
+                        c) Isolation Forest
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios14" id="optionsRadios14d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios14d">
+                        d) Linear Regression
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">15. What does the term 'ensemble learning' refer to?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios15" id="optionsRadios15a" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios15a">
+                        a) Training multiple models independently and combining their predictions
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios15" id="optionsRadios15b" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios15b">
+                        b) Training a single model with multiple hidden layers
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios15" id="optionsRadios15c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios15c">
+                        c) Using cross-validation to evaluate model performance
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios15" id="optionsRadios15d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios15d">
+                        d) Combining features from multiple datasets
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">16. What is the primary goal of unsupervised learning?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios16" id="optionsRadios16a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios16a">
+                        a) To classify data into predefined categories
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios16" id="optionsRadios16b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios16b">
+                        b) To optimize an objective function
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios16" id="optionsRadios16c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios16c">
+                        c) To discover patterns in unlabelled data
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios16" id="optionsRadios16d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios16d">
+                        d) To predict continuous values
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">17. Which algorithm is used for anomaly detection?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios17" id="optionsRadios17a" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios17a">
+                        a) Linear Regression
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios17" id="optionsRadios17b" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios17b">
+                        b) K-Means Clustering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios17" id="optionsRadios17c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios17c">
+                        c) Isolation Forest
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios17" id="optionsRadios17d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios17d">
+                        d) Decision Trees
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">18. What does the term 'overfitting' refer to in machine learning?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios18" id="optionsRadios18a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios18a">
+                        a) The difference between predicted and actual values
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios18" id="optionsRadios18b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios18b">
+                        b) The error introduced by overly simplistic assumptions
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios18" id="optionsRadios18c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios18c">
+                        c) The variability of predictions for a given input
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios18" id="optionsRadios18d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios18d">
+                        d) The tendency of a model to perform well on training data but poorly on unseen data
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">19. Which technique is used to handle class imbalance in classification tasks?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios19" id="optionsRadios19a" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios19a">
+                        a) Oversampling
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios19" id="optionsRadios19b" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios19b">
+                        b) Undersampling
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios19" id="optionsRadios19c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios19c">
+                        c) SMOTE (Synthetic Minority Over-sampling Technique)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios19" id="optionsRadios19d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios19d">
+                        d) All of the above
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">20. Which algorithm is used for regression analysis when the relationship between variables is non-linear?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios20" id="optionsRadios20a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios20a">
+                        a) Ordinary Least Squares Regression
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios20" id="optionsRadios20b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios20b">
+                        b) Ridge Regression
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios20" id="optionsRadios20c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios20c">
+                        c) Polynomial Regression
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios20" id="optionsRadios20d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios20d">
+                        d) Logistic Regression
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">21. What is the purpose of cross-validation in machine learning?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios21" id="optionsRadios21a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios21a">
+                        a) To validate the model on a separate test set
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios21" id="optionsRadios21b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios21b">
+                        b) To evaluate model performance on training data
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios21" id="optionsRadios21c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios21c">
+                        c) To prevent overfitting by assessing generalization performance
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios21" id="optionsRadios21d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios21d">
+                        d) To tune hyperparameters of the model
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">22. Which technique is used to handle missing data in a dataset?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios22" id="optionsRadios22a" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios22a">
+                        a) Data scaling
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios22" id="optionsRadios22b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios22b">
+                        b) Data normalization
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios22" id="optionsRadios22c" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios22c">
+                        c) Imputation
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios22" id="optionsRadios22d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios22d">
+                        d) Feature selection
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">23. What is the purpose of regularization in machine learning?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios23" id="optionsRadios23a" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios23a">
+                        a) To increase the complexity of the model
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios23" id="optionsRadios23b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios23b">
+                        b) To decrease the complexity of the model
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios23" id="optionsRadios23c" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios23c">
+                        c) To improve model performance on training data
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios23" id="optionsRadios23d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios23d">
+                        d) To increase model interpretability
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">24. Which evaluation metric is used for classification problems when the classes are imbalanced?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios24" id="optionsRadios24a" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios24a">
+                        a) Accuracy
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios24" id="optionsRadios24b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios24b">
+                        b) Precision
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios24" id="optionsRadios24c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios24c">
+                        c) Recall
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios24" id="optionsRadios24d" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios24d">
+                        d) F1-score
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">25. Which algorithm is used for feature extraction in natural language processing (NLP)?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios25" id="optionsRadios25a" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios25a">
+                        a) Support Vector Machines (SVM)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios25" id="optionsRadios25b" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios25b">
+                        b) Principal Component Analysis (PCA)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios25" id="optionsRadios25c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios25c">
+                        c) Word Embeddings (Word2Vec, GloVe)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios25" id="optionsRadios25d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios25d">
+                        d) K-Means Clustering
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">26. What is the purpose of feature scaling in machine learning?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios26" id="optionsRadios26a" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios26a">
+                        a) To increase the number of features
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios26" id="optionsRadios26b" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios26b">
+                        b) To decrease the number of features
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios26" id="optionsRadios26c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios26c">
+                        c) To normalize input data
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios26" id="optionsRadios26d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios26d">
+                        d) To introduce non-linearity into the model
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">27. Which algorithm is used for dimensionality reduction?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios27" id="optionsRadios27a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios27a">
+                        a) K-Nearest Neighbors (KNN)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios27" id="optionsRadios27b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios27b">
+                        b) Principal Component Analysis (PCA)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios27" id="optionsRadios27c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios27c">
+                        c) Decision Trees
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios27" id="optionsRadios27d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios27d">
+                        d) Random Forest
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">28. Which technique is used to handle multicollinearity in regression analysis?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios28" id="optionsRadios28a" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios28a">
+                        a) Ridge Regression
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios28" id="optionsRadios28b" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios28b">
+                        b) Lasso Regression
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios28" id="optionsRadios28c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios28c">
+                        c) Elastic Net Regression
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios28" id="optionsRadios28d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios28d">
+                        d) Ordinary Least Squares Regression
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">29. Which evaluation metric is used for regression problems?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios29" id="optionsRadios29a" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios29a">
+                        a) Accuracy
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios29" id="optionsRadios29b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios29b">
+                        b) Precision
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios29" id="optionsRadios29c" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios29c">
+                        c) Recall
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios29" id="optionsRadios29d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios29d">
+                        d) Mean Squared Error (MSE)
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>
+        
+        <div class="question-container">
+            <fieldset class="form-group">
+                <p style="margin-top: 25px; font-size: larger;">30. What is the purpose of a validation set?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios30" id="optionsRadios30a" value="option1" required>
+                    <label class="form-check-label" for="optionsRadios30a">
+                        a) To train the model
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios30" id="optionsRadios30b" value="option2" required>
+                    <label class="form-check-label" for="optionsRadios30b">
+                        b) To test the model
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios30" id="optionsRadios30c" value="option3" required>
+                    <label class="form-check-label" for="optionsRadios30c">
+                        c) To tune hyperparameters of the model
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios30" id="optionsRadios30d" value="option4" required>
+                    <label class="form-check-label" for="optionsRadios30d">
+                        d) To assess the generalization performance of the model
+                    </label>
+                </div>
+            </fieldset><br></br>
+        </div>   
+        <div id="resultContainer"></div>
+        <div class="row">
+        <div class="col">
+        <button type="button" id="submitButton" class="btn btn-light btn-common" form="mlForm" onclick="calculateScore()" >Submit</button>
+        <button type="reset" class="btn btn-light btn-common" onclick="resetForm()" form="mlForm">Reset</button><br></br>
+        </div>
+    </div>
+    </form>
+    </div>  
+<script src="quiz.js"></script>                   
+</body>
+</html>
