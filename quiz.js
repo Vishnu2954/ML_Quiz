@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function validateQuestions() {
-        let totalQuestions = 5; 
+        let totalQuestions = 30; 
         for (let i = 1; i <= totalQuestions; i++) {
             let selectedOption = document.querySelector('input[name="optionsRadios'+i+'"]:checked');
             if (!selectedOption) {
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return; 
         }
 
-        let totalQuestions = 5; 
+        let totalQuestions = 30; 
         let correctAnswers = 0; 
         for (let i = 1; i <= totalQuestions; i++) {
             let selectedOption = document.querySelector('input[name="optionsRadios'+i+'"]:checked');
