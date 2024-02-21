@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementById('mlForm');
-    var resultContainer = document.getElementById('resultContainer');
 
     function resetForm() {
         var radioButtons = form.querySelectorAll('input[type="radio"]');
         radioButtons.forEach(function (radioButton) {
             radioButton.checked = false;
         });
-        resultContainer.innerHTML = ''; 
     }
 
     var resetButton = form.querySelector('button[type="reset"]');
@@ -35,8 +33,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    var closeButton = document.querySelector('.modal-header .close');
+    closeButton.addEventListener('click', function () {
+        $('#exampleModalCenter').modal('hide');
+    });
+
+    var noButton = document.querySelector('.modal-footer .btn-secondary');
+    noButton.addEventListener('click', function () {
+        $('#exampleModalCenter').modal('hide');
+    });
+
     function validateQuestions() {
-        let totalQuestions = 30; 
+        let totalQuestions = 5; 
         for (let i = 1; i <= totalQuestions; i++) {
             let selectedOption = document.querySelector('input[name="optionsRadios'+i+'"]:checked');
             if (!selectedOption) {
@@ -52,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return; 
         }
 
-        let totalQuestions = 30; 
+        let totalQuestions = 5; 
         let correctAnswers = 0; 
         for (let i = 1; i <= totalQuestions; i++) {
             let selectedOption = document.querySelector('input[name="optionsRadios'+i+'"]:checked');
@@ -66,15 +74,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let percentageScore = (correctAnswers / totalQuestions) * 100;
 
-        resultContainer.innerHTML = "<p>Your percentage score is: " + percentageScore.toFixed(2) + "%</p>";
+        var modalBody = document.querySelector('.modal-body');
+        modalBody.innerHTML = "<p>Your percentage score is: " + percentageScore.toFixed(2) + "%</p>";
         if (percentageScore >= 70) {
-            resultContainer.innerHTML += "<p>Congratulations! You are eligible for the Deep Learning course.</p>";
+            modalBody.innerHTML += "<p>Congratulations! You are eligible for the Deep Learning course</p><br></br><p>Do you want to enroll?</p>";
         } else {
-            resultContainer.innerHTML += "<p>Your score is below 70%. Do you want to take the Machine Learning course again?</p>";
+            modalBody.innerHTML += "<p>Your score is below 70%</p><br></br><p>Do you want to take the Machine Learning course again?</p>";
         }
+
+        $('#exampleModalCenter').modal('show'); 
     }
 
     var submitButton = document.getElementById('submitButton');
     submitButton.addEventListener('click', calculateScore);
-
 });
