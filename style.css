@@ -45,26 +45,13 @@
     color: rgb(74, 74, 74);
     font-size: large;
 }
-#resultContainer {
-    font-size: 32px;
-    color: rgb(250, 205, 205);
-    text-align: center;
-}
+
 .form-check{
     font-size: large;
     margin-bottom: 10px;
     margin-top: 30px;
 }
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
 
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
 .btn-common{
     padding: 20px 30px;
     margin-right: 50px; 
@@ -77,8 +64,41 @@
     box-shadow: none; 
     color: black;
 }
-#resultContainer {
-    font-size: 32px;
-    color: rgb(155, 50, 50);
-    text-align: center;
+
+.modal-dialog {
+    max-width: 800px;
+    width: 80%; 
+    margin: 1.75rem auto;
 }
+
+.modal-content {
+    height: 400px; 
+    overflow-y: auto; 
+}
+.modal-body p {
+    font-size: 24px; 
+}
+
+.modal-footer .btn {
+    font-size: 20px;
+    padding: 10px 20px; 
+}
+
+.modal-header .close {
+    font-size: 28px; 
+    width: 40px; 
+    height: 40px; 
+    border: none;
+    background-color: white;
+}
+
+.fade-in {
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+
