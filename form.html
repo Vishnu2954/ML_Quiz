@@ -11,10 +11,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>ML Quiz</title>
 </head>
-<body>
-    <h2 class="fade-in" style="text-align: center; margin-top: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Machine Learning Quiz</h2>
-
-    <div class="container fade-in">
+<body class="fade-in">
+    
+    <h1 class="fade-in" style="text-align: center; margin-top: 50px; font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; ">Machine Learning Quiz</h1>
+    <div class="theme-toggler" style="position: absolute; top: 7.5%; transform: translateY(-50%); right: 730px;">
+        <i class="fas fa-adjust fa-2x" id="theme-toggler-icon" onclick="toggleTheme()"></i>
+    </select>
+    </div>
+    <div class="container">
         <form id="mlForm">
         <div class="questions">
             <div class="question-container">
@@ -924,6 +928,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalCenterTitle" style="text-align: center;">Quiz Result</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -931,20 +936,27 @@
             <div class="modal-body">
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" >Yes</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
             </div>
           </div>
         </div>
       </div>
       <script src="quiz.js"></script> 
-      <script>
+       <script>
         $(document).ready(function(){
           $("#submitButton").click(function(){
             $("#exampleModalCenter").modal();
           });
         });
-        </script> 
-        
+
+        var themes = ['onyx', 'ebony', 'twilight', 'shadow', 'midnight'];
+        var currentThemeIndex = 0;
+
+        function toggleTheme() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            var theme = themes[currentThemeIndex];
+            document.body.className = theme;
+        }
+    </script> 
 </body>
 </html>
