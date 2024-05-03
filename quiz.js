@@ -77,9 +77,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var modalBody = document.querySelector('.modal-body');
         modalBody.innerHTML = "<p>Your percentage score is: " + percentageScore.toFixed(2) + "%</p>";
         if (percentageScore >= 70) {
-            modalBody.innerHTML += "<p>Congratulations! You are eligible for the Deep Learning course</p><br></br><p>Do you want to enroll?</p>";
+            modalBody.innerHTML += "<p>Congratulations! You have passed the quiz with flying colors!</p>";
+            
         } else {
-            modalBody.innerHTML += "<p>Your score is below 70%</p><br></br><p>Do you want to take the Machine Learning course again?</p>";
+            modalBody.innerHTML += "<p>Oops! You need a minimum of 70% to pass the quiz.</p><br></br><p>Do you want to give it a one more try?</p>";
         }
 
         $('#exampleModalCenter').modal('show'); 
